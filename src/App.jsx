@@ -66,7 +66,11 @@ function App() {
     const checkAuth = async () => {
       try {
         const response = await fetch("http://localhost:5000/api/auth/user", {
-          credentials: "include"
+          credentials: "include",
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json"
+          }
         });
         if (response.ok) {
           const data = await response.json();
@@ -76,7 +80,7 @@ function App() {
           }
         }
       } catch (err) {
-        console.log("Auth check failed (backend may not be running)");
+        console.log("Auth check failed - Java backend may not be running on port 5000");
       } finally {
         setCheckingAuth(false);
       }
@@ -115,7 +119,10 @@ function App() {
     try {
       await fetch("http://localhost:5000/api/auth/logout", {
         method: "POST",
-        credentials: "include"
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json"
+        }
       });
       setCredentials(null);
       setOauthUser(null);
