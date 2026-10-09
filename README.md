@@ -14,6 +14,7 @@ A modern, full-stack web application for analyzing Steam gaming statistics and p
 
 ## 📋 Table of Contents
 
+- [Dashboard](#dashboard)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -26,6 +27,11 @@ A modern, full-stack web application for analyzing Steam gaming statistics and p
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
+
+---
+
+## Dashboard
+<img width="1900" height="1074" alt="image" src="https://github.com/user-attachments/assets/157f6850-2742-44f4-adb6-87d7bdd1f539" />
 
 ---
 
@@ -374,7 +380,7 @@ java -version
 - Ensure backend is running on port 5000
 - Check firewall settings
 
-→ **See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for detailed solutions**
+→ **See [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md) for detailed solutions**
 
 ---
 
@@ -488,12 +494,12 @@ of this software and associated documentation files...
 ## 📞 Support
 
 ### Resources
-- 📖 [START_HERE.md](./START_HERE.md) - Getting started guide
-- 🔧 [JAVA_BACKEND_SETUP.md](./JAVA_BACKEND_SETUP.md) - Backend setup
-- 🐛 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) - Common issues
+- 📖 [START_HERE.md](./docs/START_HERE.md) - Getting started guide
+- 🔧 [JAVA_BACKEND_SETUP.md](./docs/JAVA_BACKEND_SETUP.md) - Backend setup
+- 🐛 [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md) - Common issues
 
 ### Getting Help
-1. Check [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
+1. Check [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md)
 2. Review existing GitHub [Issues](https://github.com/ManitGitUser/Steam-Analytics-Dashboard/issues)
 3. Create a new issue with:
    - Error message

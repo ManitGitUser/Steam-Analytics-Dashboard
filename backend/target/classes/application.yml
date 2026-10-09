@@ -1,0 +1,38 @@
+server:
+  port: 5000
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: game-dashboard-backend
+  
+  security:
+    oauth2:
+      client:
+        registration:
+          steam:
+            client-id: ${STEAM_CLIENT_ID:your_steam_client_id}
+            client-secret: ${STEAM_CLIENT_SECRET:your_steam_client_secret}
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:5000/login/oauth2/code/steam
+            scope: identify profile
+            provider: steam
+        provider:
+          steam:
+            authorization-uri: https://steamcommunity.com/openid/login
+            token-uri: https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/
+            user-info-uri: https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/
+  
+  session:
+    store-type: none
+    timeout: 1800s
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+
+steam:
+  api-key: ${STEAM_API_KEY:your_steam_api_key}
+  frontend-url: http://localhost:5173
